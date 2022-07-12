@@ -5,4 +5,14 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-void main() {}
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:quiz/home.dart';
+
+void main() {
+  // Test that the app is loaded correctly.
+  testWidgets('Quiz app loads correctly', (WidgetTester tester) async {
+    await tester.pumpWidget(const MaterialApp(home: Home()));
+    expect(find.text("Quiz"), findsOneWidget);
+  });
+}
