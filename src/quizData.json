@@ -3,7 +3,7 @@
     "quizzes": [
       {
         "title": "Semantic Versioning",
-        "imageUrl": "https://quiz.jakenelson.cloud/semver.svg",
+        "imageUrl": "%PUBLIC_URL%/semver.svg",
         "questions": [
           {
             "question": "What does 'Semver' stand for?",
@@ -64,7 +64,7 @@
       },
       {
         "title": "Git Merge Methods",
-        "imageUrl": "https://quiz.jakenelson.cloud/git-merge.svg",
+        "imageUrl": "%PUBLIC_URL%/quizImages/git-merge.svg",
         "questions": [
           {
             "question": "What is the primary purpose of the 'git merge' command?",
