@@ -1,0 +1,19 @@
+.question-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .question-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 20px); /* 20px is the margin you have in the 'App.css' */
+    align-items: center;
+  }

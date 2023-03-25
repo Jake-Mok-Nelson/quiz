@@ -13,6 +13,7 @@
           },
           {
             "question": "Which planet is closest to the sun?",
+            "imageURL": "https://images.immediate.co.uk/production/volatile/sites/25/2020/08/GettyImages-1128675063-3fe6c27-scaled.jpg",
             "options": ["Mars", "Earth", "Venus", "Mercury"],
             "correctAnswer": 3,
             "explanation": "Mercury is the closest planet to the sun in our solar system."

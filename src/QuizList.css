@@ -86,3 +86,11 @@
       opacity: 1;
     }
   }
+
+  .quiz-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 20px); /* 20px is the margin you have in the 'App.css' */
+    align-items: center;
+  }

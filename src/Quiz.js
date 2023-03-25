@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Quiz.css";
 
 const Quiz = ({ quizQuestions, onReset}) => {
   const [questions, setQuestions] = useState(quizQuestions);
@@ -7,6 +8,10 @@ const Quiz = ({ quizQuestions, onReset}) => {
   const [showScore, setShowScore] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
   const [explanation, setExplanation] = useState("");
+
+  if (!quizQuestions || quizQuestions.length === 0) {
+    return <div>Quiz data is not available.</div>;
+  }
 
   const handleAnswer = (answerIndex) => {
     if (answerIndex === questions[currentQuestion].correctAnswer) {
@@ -55,6 +60,11 @@ const Quiz = ({ quizQuestions, onReset}) => {
             <div className="question-count">
               <span>Question {currentQuestion + 1}</span>/{questions.length}
             </div>
+              {questions[currentQuestion].imageURL && (
+                <div className="question-image">
+                  <img src={questions[currentQuestion].imageURL} alt="Question" />
+                </div>
+              )}
             <div className="question-text">
               {questions[currentQuestion]?.question}
             </div>
