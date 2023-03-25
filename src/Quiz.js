@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Quiz.css";
 
 const Quiz = ({ quizQuestions, onReset}) => {
-  const [questions, setQuestions] = useState(quizQuestions);
+  const [questions] = useState(quizQuestions);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
