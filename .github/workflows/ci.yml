@@ -3,7 +3,7 @@ name: Continuous Integration
 on:
   pull_request:
     branches:
-      - main # Change this to your default branch if it's not "main"
+      - main
 
 jobs:
   build:
@@ -20,5 +20,5 @@ jobs:
     - name: Install dependencies and run tests
       run: |
         npm ci
-        npm build
         npm test
+        npm run build
