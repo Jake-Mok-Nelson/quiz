@@ -2,7 +2,7 @@
   {
     "quizzes": [
       {
-        "title": "Semantic Versioning Basics",
+        "title": "SemVer Basics",
         "imageURL": "https://quiz.jakenelson.cloud/semver.svg",
         "questions": [
           {
