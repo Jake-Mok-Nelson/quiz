@@ -135,7 +135,7 @@
               "A containerization platform",
               "A programming language"
             ],
-            "correctIndex": 2,
+            "correctAnswer": 2,
             "explanation": "Docker is a containerization platform that allows you to package your applications and their dependencies into containers, which can run consistently across different environments."
           },
           {
@@ -146,7 +146,7 @@
               "docker run",
               "docker pull"
             ],
-            "correctIndex": 2,
+            "correctAnswer": 2,
             "explanation": "The 'docker run' command is used to create a new Docker container from an image. It combines the 'docker create' and 'docker start' commands, creating and starting the container in a single command."
           },
           {
@@ -157,7 +157,7 @@
               "A script containing instructions to build a Docker image",
               "A file that lists all running Docker containers"
             ],
-            "correctIndex": 2,
+            "correctAnswer": 2,
             "explanation": "A Dockerfile is a script containing instructions to build a Docker image. It specifies the base image, application code, dependencies, and configuration required to create a custom image for running a containerized application."
           },
           {
@@ -168,7 +168,7 @@
               "To define network settings",
               "To store Docker images"
             ],
-            "correctIndex": 1,
+            "correctAnswer": 1,
             "explanation": "Docker volumes are used to persist data across container restarts, allowing containers to maintain their state even when they are stopped and started again."
           },
           {
@@ -179,7 +179,7 @@
               "docker containers",
               "docker ls"
             ],
-            "correctIndex": 0,
+            "correctAnswer": 0,
             "explanation": "The 'docker ps' command is used to list all running Docker containers. It shows container IDs, image names, command, creation time, status, and ports."
           },
           {
@@ -190,7 +190,7 @@
               "Using Docker volumes",
               "Using environment variables"
             ],
-            "correctIndex": 2,
+            "correctAnswer": 2,
             "explanation": "Docker volumes can be used to share data between two containers. A volume can be created and mounted to both containers, allowing them to read and write data to the same location."
           },
           {
@@ -201,7 +201,7 @@
               "To store container logs",
               "To manage container storage"
             ],
-            "correctIndex": 1,
+            "correctAnswer": 1,
             "explanation": "Docker networks are used to connect containers to each other and the host system. They provide a way for containers to communicate and can be configured to isolate containers or expose them to external networks."
           }
         ]
@@ -218,7 +218,7 @@
               "A containerization platform",
               "A version control system"
             ],
-            "correctIndex": 1,
+            "correctAnswer": 1,
             "explanation": "Terraform is an infrastructure orchestration tool that allows you to define and manage infrastructure as code. It supports multiple cloud providers and automates the provisioning and management of resources."
           },
           {
@@ -229,7 +229,7 @@
               "HCL (HashiCorp Configuration Language)",
               "Python"
             ],
-            "correctIndex": 2,
+            "correctAnswer": 2,
             "explanation": "Terraform configuration files are written in HCL (HashiCorp Configuration Language), a human-readable language designed by HashiCorp specifically for configuring infrastructure resources."
           },
           {
@@ -240,7 +240,7 @@
               "A tool for validating Terraform configuration files",
               "A service that hosts Terraform configuration files"
             ],
-            "correctIndex": 1,
+            "correctAnswer": 1,
             "explanation": "A Terraform provider is a plugin that allows Terraform to manage resources for a specific platform, such as AWS, GCP, Azure, or Kubernetes. Providers are responsible for implementing the API interactions and exposing resources that can be managed by Terraform."
           },
           {
@@ -251,7 +251,7 @@
               "terraform plan",
               "terraform validate"
             ],
-            "correctIndex": 0,
+            "correctAnswer": 0,
             "explanation": "The 'terraform init' command initializes the backend for storing your state and installs the necessary provider plugins. It should be run before any other Terraform commands, as it sets up the working directory for use with Terraform."
           }
         ]
@@ -268,7 +268,7 @@
               "An infrastructure provisioning tool",
               "A programming language"
             ],
-            "correctIndex": 1,
+            "correctAnswer": 1,
             "explanation": "Kubernetes is a container orchestration platform that automates the deployment, scaling, and management of containerized applications. It groups containers together into logical units for easy management and discoverability."
           },
           {
@@ -279,7 +279,7 @@
               "A tool for validating Kubernetes configuration files",
               "A service that hosts Kubernetes configuration files"
             ],
-            "correctIndex": 0,
+            "correctAnswer": 0,
             "explanation": "A Kubernetes Pod is the smallest and simplest unit in the Kubernetes object model. It represents a single instance of a running process and consists of one or more containers that share the same network namespace, allowing them to communicate with each other."
           },
           {
@@ -290,7 +290,7 @@
               "A tool for managing container images",
               "A package manager for Kubernetes resources"
             ],
-            "correctIndex": 1,
+            "correctAnswer": 1,
             "explanation": "A Kubernetes Service is an abstraction that defines a logical set of Pods and a policy to access them. Services provide a stable IP address and DNS name, allowing other resources in the cluster to discover and communicate with the Pods, even as they are created and destroyed."
           },
           {
@@ -301,7 +301,7 @@
               "To store configuration data for containers",
               "To schedule and run containers on nodes"
             ],
-            "correctIndex": 1,
+            "correctAnswer": 1,
             "explanation": "A Kubernetes Deployment is a higher-level abstraction that allows you to manage the desired state of a replicated application. It ensures that a specified number of replicas of a Pod are running at any given time, handling updates and rollbacks automatically."
           }
         ]
