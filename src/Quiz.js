@@ -43,12 +43,12 @@ const Quiz = ({ quizQuestions, onReset}) => {
     <div className="quiz">
     {showScore ? (
     <div className="score-section">
-        <h2>You scored {score} out of {questions.length}</h2>
+        <h2>You scored {score} out of {questions.length}</h2><br></br>
         {
           // Check if they got a perfect score
           score === questions.length ? (
             <div className="perfect-score">
-              <h2>Perfect 👍</h2>
+              <h2>Perfect 👍</h2><br></br>
             </div>
           ) : null
         }
@@ -65,8 +65,8 @@ const Quiz = ({ quizQuestions, onReset}) => {
     </div>
     ) : showExplanation ? (
         <div className="explanation-section">
-          <h2>Sorry, that's not correct.</h2>
-          <div className="explanation-text">{explanation}</div>
+          <h2>Sorry, that's not correct.</h2><br></br>
+          <div className="explanation-text">{explanation}</div><br></br>
           <button onClick={handleNextQuestion}>
             {currentQuestion + 1 < questions.length ? "Next Question" : "Show Score"}
           </button>
@@ -76,7 +76,7 @@ const Quiz = ({ quizQuestions, onReset}) => {
           <div className="question-section">
             <div className="question-count">
               <span>Question {currentQuestion + 1}</span>/{questions.length}
-            </div>
+            </div><br></br>
               {questions[currentQuestion].imageURL && (
                 <div className="question-image">
                   <img src={questions[currentQuestion].imageURL} alt="Question" />
