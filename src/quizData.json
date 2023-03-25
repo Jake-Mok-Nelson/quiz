@@ -2,7 +2,7 @@
   {
     "quizzes": [
       {
-        "title": "Semantic Versioning",
+        "title": "Semantic Versioning Basics",
         "imageURL": "https://quiz.jakenelson.cloud/semver.svg",
         "questions": [
           {
@@ -122,7 +122,191 @@
             "explanation": "The fast-forward method applies changes from the source branch directly to the target branch without creating a merge commit, if possible. This can only occur when the target branch has not diverged from the source branch, resulting in a linear commit history."
           }
         ]
-      }      
+      },
+      {
+        "title": "Docker Basics",
+        "imageURL": "https://quiz.jakenelson.cloud/docker.svg",
+        "questions": [
+          {
+            "question": "What is Docker?",
+            "options": [
+              "A cloud computing service",
+              "An operating system",
+              "A containerization platform",
+              "A programming language"
+            ],
+            "correctIndex": 2,
+            "explanation": "Docker is a containerization platform that allows you to package your applications and their dependencies into containers, which can run consistently across different environments."
+          },
+          {
+            "question": "Which command is used to create a new Docker container from an image?",
+            "options": [
+              "docker create",
+              "docker build",
+              "docker run",
+              "docker pull"
+            ],
+            "correctIndex": 2,
+            "explanation": "The 'docker run' command is used to create a new Docker container from an image. It combines the 'docker create' and 'docker start' commands, creating and starting the container in a single command."
+          },
+          {
+            "question": "What is a Dockerfile?",
+            "options": [
+              "A configuration file for Docker Compose",
+              "A file containing Docker registry credentials",
+              "A script containing instructions to build a Docker image",
+              "A file that lists all running Docker containers"
+            ],
+            "correctIndex": 2,
+            "explanation": "A Dockerfile is a script containing instructions to build a Docker image. It specifies the base image, application code, dependencies, and configuration required to create a custom image for running a containerized application."
+          },
+          {
+            "question": "What is the purpose of a Docker volume?",
+            "options": [
+              "To store environment variables",
+              "To persist data across container restarts",
+              "To define network settings",
+              "To store Docker images"
+            ],
+            "correctIndex": 1,
+            "explanation": "Docker volumes are used to persist data across container restarts, allowing containers to maintain their state even when they are stopped and started again."
+          },
+          {
+            "question": "Which command is used to list all running Docker containers?",
+            "options": [
+              "docker ps",
+              "docker list",
+              "docker containers",
+              "docker ls"
+            ],
+            "correctIndex": 0,
+            "explanation": "The 'docker ps' command is used to list all running Docker containers. It shows container IDs, image names, command, creation time, status, and ports."
+          },
+          {
+            "question": "How do you share data between two containers?",
+            "options": [
+              "By linking the containers",
+              "Using Docker Compose",
+              "Using Docker volumes",
+              "Using environment variables"
+            ],
+            "correctIndex": 2,
+            "explanation": "Docker volumes can be used to share data between two containers. A volume can be created and mounted to both containers, allowing them to read and write data to the same location."
+          },
+          {
+            "question": "What is the purpose of a Docker network?",
+            "options": [
+              "To store Docker images",
+              "To connect containers to each other and the host",
+              "To store container logs",
+              "To manage container storage"
+            ],
+            "correctIndex": 1,
+            "explanation": "Docker networks are used to connect containers to each other and the host system. They provide a way for containers to communicate and can be configured to isolate containers or expose them to external networks."
+          }
+        ]
+      },
+      {
+        "title": "Terraform Basics",
+        "imageURL": "https://quiz.jakenelson.cloud/terraform.svg",
+        "questions": [
+          {
+            "question": "What is Terraform?",
+            "options": [
+              "A programming language",
+              "An infrastructure orchestration tool",
+              "A containerization platform",
+              "A version control system"
+            ],
+            "correctIndex": 1,
+            "explanation": "Terraform is an infrastructure orchestration tool that allows you to define and manage infrastructure as code. It supports multiple cloud providers and automates the provisioning and management of resources."
+          },
+          {
+            "question": "What language is used to write Terraform configuration files?",
+            "options": [
+              "YAML",
+              "JSON",
+              "HCL (HashiCorp Configuration Language)",
+              "Python"
+            ],
+            "correctIndex": 2,
+            "explanation": "Terraform configuration files are written in HCL (HashiCorp Configuration Language), a human-readable language designed by HashiCorp specifically for configuring infrastructure resources."
+          },
+          {
+            "question": "What is a Terraform provider?",
+            "options": [
+              "A version control system for Terraform configurations",
+              "A plugin that allows Terraform to manage resources for a specific platform",
+              "A tool for validating Terraform configuration files",
+              "A service that hosts Terraform configuration files"
+            ],
+            "correctIndex": 1,
+            "explanation": "A Terraform provider is a plugin that allows Terraform to manage resources for a specific platform, such as AWS, GCP, Azure, or Kubernetes. Providers are responsible for implementing the API interactions and exposing resources that can be managed by Terraform."
+          },
+          {
+            "question": "Which command initializes the backend and installs the necessary provider plugins in Terraform?",
+            "options": [
+              "terraform init",
+              "terraform apply",
+              "terraform plan",
+              "terraform validate"
+            ],
+            "correctIndex": 0,
+            "explanation": "The 'terraform init' command initializes the backend for storing your state and installs the necessary provider plugins. It should be run before any other Terraform commands, as it sets up the working directory for use with Terraform."
+          }
+        ]
+      },
+      {
+        "title": "Kubernetes Basics",
+        "imageURL": "https://quiz.jakenelson.cloud/kubernetes.svg",
+        "questions": [
+          {
+            "question": "What is Kubernetes?",
+            "options": [
+              "A version control system",
+              "A container orchestration platform",
+              "An infrastructure provisioning tool",
+              "A programming language"
+            ],
+            "correctIndex": 1,
+            "explanation": "Kubernetes is a container orchestration platform that automates the deployment, scaling, and management of containerized applications. It groups containers together into logical units for easy management and discoverability."
+          },
+          {
+            "question": "What is a Kubernetes Pod?",
+            "options": [
+              "A group of containers that share the same network namespace and can communicate with each other",
+              "A version control system for Kubernetes configurations",
+              "A tool for validating Kubernetes configuration files",
+              "A service that hosts Kubernetes configuration files"
+            ],
+            "correctIndex": 0,
+            "explanation": "A Kubernetes Pod is the smallest and simplest unit in the Kubernetes object model. It represents a single instance of a running process and consists of one or more containers that share the same network namespace, allowing them to communicate with each other."
+          },
+          {
+            "question": "What is a Kubernetes Service?",
+            "options": [
+              "A group of Pods that work together",
+              "An abstraction that defines a logical set of Pods and a policy to access them",
+              "A tool for managing container images",
+              "A package manager for Kubernetes resources"
+            ],
+            "correctIndex": 1,
+            "explanation": "A Kubernetes Service is an abstraction that defines a logical set of Pods and a policy to access them. Services provide a stable IP address and DNS name, allowing other resources in the cluster to discover and communicate with the Pods, even as they are created and destroyed."
+          },
+          {
+            "question": "What is the purpose of a Kubernetes Deployment?",
+            "options": [
+              "To provide a stable IP address for Pods",
+              "To manage the desired state of a replicated application",
+              "To store configuration data for containers",
+              "To schedule and run containers on nodes"
+            ],
+            "correctIndex": 1,
+            "explanation": "A Kubernetes Deployment is a higher-level abstraction that allows you to manage the desired state of a replicated application. It ensures that a specified number of replicas of a Pod are running at any given time, handling updates and rollbacks automatically."
+          }
+        ]
+      }
+      
     ]
   }
 ]
