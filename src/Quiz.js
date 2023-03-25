@@ -43,12 +43,29 @@ const Quiz = ({ quizQuestions, onReset}) => {
     <div className="quiz">
     {showScore ? (
     <div className="score-section">
-        You scored {score} out of {questions.length}
+        <h2>You scored {score} out of {questions.length}</h2>
+        {
+          // Check if they got a perfect score
+          score === questions.length ? (
+            <div className="perfect-score">
+              <h2>Perfect 👍</h2>
+            </div>
+          ) : null
+        }
+        {
+          // Check if they get less than 50%
+          score < questions.length / 2 ? (
+            <div className="less-than-50">
+              <h3>Don't worry, tests are largely bullshit anyway.  ¯\_(ツ)_/¯</h3>
+            </div>
+          ) : null
+        }
         <br />
         <button onClick={onReset}>Home</button>
     </div>
     ) : showExplanation ? (
         <div className="explanation-section">
+          <h2>Sorry, that's not correct.</h2>
           <div className="explanation-text">{explanation}</div>
           <button onClick={handleNextQuestion}>
             {currentQuestion + 1 < questions.length ? "Next Question" : "Show Score"}
@@ -66,7 +83,7 @@ const Quiz = ({ quizQuestions, onReset}) => {
                 </div>
               )}
             <div className="question-text">
-              {questions[currentQuestion]?.question}
+              <h3>{questions[currentQuestion]?.question}</h3>
             </div>
           </div>
           <div className="answer-section">
