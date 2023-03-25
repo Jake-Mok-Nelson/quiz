@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+  <!-- Branch 1 -->
+  <line x1="10" y1="80" x2="100" y2="20" stroke="#4CAF50" stroke-width="4" />
+  <circle cx="10" cy="80" r="4" fill="#4CAF50" />
+  <circle cx="100" cy="20" r="4" fill="#4CAF50" />
+  <!-- Branch 2 -->
+  <line x1="10" y1="20" x2="100" y2="80" stroke="#2196F3" stroke-width="4" />
+  <circle cx="10" cy="20" r="4" fill="#2196F3" />
+  <circle cx="100" cy="80" r="4" fill="#2196F3" />
+  <!-- Merged branch -->
+  <line x1="100" y1="50" x2="190" y2="50" stroke="#F44336" stroke-width="4" />
+  <circle cx="190" cy="50" r="4" fill="#F44336" />
+  <!-- Merge point -->
+  <circle cx="100" cy="50" r="6" fill="#F44336" />
+</svg>
