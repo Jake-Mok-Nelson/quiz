@@ -2,47 +2,126 @@
   {
     "quizzes": [
       {
-        "title": "General Knowledge",
-        "imageURL": "https://w7.pngwing.com/pngs/963/556/png-transparent-human-brain-brain-people-presentation-human-brain-thumbnail.png",
+        "title": "Semantic Versioning",
+        "imageUrl": "https://quiz.jakenelson.cloud/semver.svg",
         "questions": [
           {
-            "question": "What is the capital of France?",
-            "options": ["Paris", "London", "Rome", "Berlin"],
-            "correctAnswer": 0,
-            "explanation": "Paris is the capital and most populous city of France."
+            "question": "What does 'Semver' stand for?",
+            "options": [
+              "Semantic Visualization",
+              "Semantic Versioning",
+              "Sequential Verification",
+              "Sequential Versioning"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Semver stands for Semantic Versioning, a convention for versioning software to convey the type of changes introduced in a new release."
           },
           {
-            "question": "Which planet is closest to the sun?",
-            "imageURL": "https://images.immediate.co.uk/production/volatile/sites/25/2020/08/GettyImages-1128675063-3fe6c27-scaled.jpg",
-            "options": ["Mars", "Earth", "Venus", "Mercury"],
-            "correctAnswer": 3,
-            "explanation": "Mercury is the closest planet to the sun in our solar system."
+            "question": "Which of the following is the correct format for Semver?",
+            "options": [
+              "Major.Minor.Patch",
+              "Patch.Minor.Major",
+              "Minor.Major.Patch",
+              "Major.Patch.Minor"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The correct format for Semver is Major.Minor.Patch, where Major, Minor, and Patch are non-negative integers representing different levels of changes in the software."
+          },
+          {
+            "question": "In Semver, what does a change in the 'Major' version indicate?",
+            "options": [
+              "Backward-compatible bug fixes",
+              "Backward-compatible new features",
+              "Backward-incompatible changes",
+              "Patch version reset"
+            ],
+            "correctAnswer": 2,
+            "explanation": "A change in the Major version indicates backward-incompatible changes, which means that the new version might break existing functionality and require users to modify their code or configurations."
+          },
+          {
+            "question": "In Semver, what does a change in the 'Minor' version indicate?",
+            "options": [
+              "Backward-compatible bug fixes",
+              "Backward-compatible new features",
+              "Backward-incompatible changes",
+              "Patch version reset"
+            ],
+            "correctAnswer": 1,
+            "explanation": "A change in the Minor version indicates the addition of backward-compatible new features. This means that the new version introduces new functionality but should not break existing code or configurations."
+          },
+          {
+            "question": "In Semver, what does a change in the 'Patch' version indicate?",
+            "options": [
+              "Backward-compatible bug fixes",
+              "Backward-compatible new features",
+              "Backward-incompatible changes",
+              "Minor version reset"
+            ],
+            "correctAnswer": 0,
+            "explanation": "A change in the Patch version indicates backward-compatible bug fixes, meaning that the new version fixes issues or bugs without introducing new features or breaking existing code or configurations."
           }
         ]
       },
       {
-        "title": "Technology",
-        "imageURL": "https://e7.pngegg.com/pngimages/200/811/png-clipart-technology-high-tech-building-resource-tecnologia-computer-network-electronics-thumbnail.png",
+        "title": "Git Merge Methods",
         "questions": [
           {
-            "question": "Which language is primarily used for web development?",
-            "options": ["Java", "Python", "JavaScript", "C#"],
+            "question": "What is the primary purpose of the 'git merge' command?",
+            "options": [
+              "To create a new branch",
+              "To commit changes to the repository",
+              "To combine the changes from one branch into another",
+              "To compare changes between branches"
+            ],
             "correctAnswer": 2,
-            "explanation": "JavaScript is the primary language used for web development, enabling interactive elements on web pages."
+            "explanation": "The 'git merge' command is used to combine the changes from one branch into another, effectively integrating the work of multiple developers or branches."
           },
           {
-            "question": "What does the abbreviation 'CSS' stand for?",
+            "question": "Which Git merge method creates a new merge commit in the target branch?",
             "options": [
-              "Cascading Style Sheets",
-              "Cascading Style Scripts",
-              "Creative Style Sheets",
-              "Creative Style Scripts"
+              "Fast-forward",
+              "Squash",
+              "Rebase",
+              "Merge commit"
+            ],
+            "correctAnswer": 3,
+            "explanation": "The merge commit method creates a new merge commit in the target branch, preserving the commit history of both branches and clearly marking the point where they were merged."
+          },
+          {
+            "question": "Which Git merge method moves the entire commit history of the source branch to the tip of the target branch?",
+            "options": [
+              "Fast-forward",
+              "Squash",
+              "Rebase",
+              "Merge commit"
+            ],
+            "correctAnswer": 2,
+            "explanation": "The rebase method moves the entire commit history of the source branch to the tip of the target branch, creating a linear commit history and avoiding the need for a merge commit."
+          },
+          {
+            "question": "Which Git merge method combines the changes of the source branch into a single commit in the target branch?",
+            "options": [
+              "Fast-forward",
+              "Squash",
+              "Rebase",
+              "Merge commit"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The squash method combines the changes of the source branch into a single commit in the target branch, creating a clean, linear commit history at the expense of detailed commit information from the source branch."
+          },
+          {
+            "question": "Which Git merge method applies changes from the source branch directly to the target branch without creating a merge commit, if possible?",
+            "options": [
+              "Fast-forward",
+              "Squash",
+              "Rebase",
+              "Merge commit"
             ],
             "correctAnswer": 0,
-            "explanation": "CSS stands for 'Cascading Style Sheets', which is a stylesheet language used for describing the look and formatting of a document written in HTML."
+            "explanation": "The fast-forward method applies changes from the source branch directly to the target branch without creating a merge commit, if possible. This can only occur when the target branch has not diverged from the source branch, resulting in a linear commit history."
           }
         ]
-      }
+      }      
     ]
   }
 ]
