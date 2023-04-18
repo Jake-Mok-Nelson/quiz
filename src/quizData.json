@@ -308,7 +308,7 @@
       },
       {
         "title": "Local Git Rebasing",
-        "imageURL": "https://quiz.gitrebasing.cloud/git_rebase.svg",
+        "imageURL": "https://quiz.jakenelson.cloud/Git_icon.svg",
         "questions": [
           {
             "question": "What is the primary purpose of 'git rebase'?",
