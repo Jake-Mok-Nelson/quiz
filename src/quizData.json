@@ -305,8 +305,68 @@
             "explanation": "A Kubernetes Deployment is a higher-level abstraction that allows you to manage the desired state of a replicated application. It ensures that a specified number of replicas of a Pod are running at any given time, handling updates and rollbacks automatically."
           }
         ]
+      },
+      {
+        "title": "Local Git Rebasing",
+        "imageURL": "https://quiz.jakenelson.cloud/Git_icon.svg",
+        "questions": [
+          {
+            "question": "What is the primary purpose of 'git rebase'?",
+            "options": [
+              "To merge two branches",
+              "To create a new branch",
+              "To delete a branch",
+              "To reapply a series of commits on a new base"
+            ],
+            "correctAnswer": 3,
+            "explanation": "The primary purpose of 'git rebase' is to reapply a series of commits on a new base, which helps create a linear history and simplifies the commit graph."
+          },
+          {
+            "question": "When performing a 'git rebase', which branch's commits get replayed?",
+            "options": [
+              "The current branch",
+              "The base branch",
+              "Both branches",
+              "None of the branches"
+            ],
+            "correctAnswer": 0,
+            "explanation": "When performing a 'git rebase', the commits from the current branch get replayed on top of the base branch."
+          },
+          {
+            "question": "What is the main difference between 'git merge' and 'git rebase'?",
+            "options": [
+              "Merge creates a new commit, while rebase does not",
+              "Rebase creates a new commit, while merge does not",
+              "Merge only works with remote branches",
+              "Rebase only works with local branches"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The main difference between 'git merge' and 'git rebase' is that 'git merge' creates a new commit representing the merge, while 'git rebase' replays the commits on a new base without creating a merge commit."
+          },
+          {
+            "question": "What is the command to perform an interactive rebase starting from a specific commit?",
+            "options": [
+              "git rebase -i <commit-hash>",
+              "git rebase --interactive <commit-hash>",
+              "git interactive-rebase <commit-hash>",
+              "git rebase <commit-hash> --interactive"
+            ],
+            "correctAnswer": 0,
+            "explanation": "To perform an interactive rebase starting from a specific commit, use the command 'git rebase -i <commit-hash>'. This allows you to modify the commit history interactively."
+          },
+          {
+            "question": "What should you do if a conflict occurs during a rebase?",
+            "options": [
+              "Resolve the conflict, stage the changes, and run 'git rebase --continue'",
+              "Resolve the conflict, stage the changes, and run 'git rebase --abort'",
+              "Resolve the conflict, stage the changes, and run 'git rebase --skip'",
+              "Resolve the conflict, stage the changes, and run 'git merge --continue'"
+            ],
+            "correctAnswer": 0,
+            "explanation": "If a conflict occurs during a rebase, you should resolve the conflict, stage the changes, and then run 'git rebase --continue' to proceed with the rebase process."
+          }
+        ]
       }
-      
     ]
   }
 ]
