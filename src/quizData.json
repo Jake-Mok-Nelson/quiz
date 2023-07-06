@@ -366,6 +366,67 @@
             "explanation": "If a conflict occurs during a rebase, you should resolve the conflict, stage the changes, and then run 'git rebase --continue' to proceed with the rebase process."
           }
         ]
+      },
+      {
+        "title": "Golang Basics",
+        "imageURL": "https://quiz.jakenelson.cloud/golang.svg",
+        "questions": [
+          {
+            "question": "What is the main purpose of Go programming language?",
+            "options": [
+              "Web development",
+              "Data analysis",
+              "Systems programming",
+              "Artificial intelligence"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Go programming language is primarily designed for systems programming. It provides efficient concurrency, low-level control, and a simple syntax for building robust and scalable software."
+          },
+          {
+            "question": "Which of the following is NOT a built-in type in Go?",
+            "options": [
+              "int",
+              "string",
+              "float64",
+              "array"
+            ],
+            "correctAnswer": 3,
+            "explanation": "While Go provides a built-in array type, it is not a dynamic type and has a fixed size. Other built-in types in Go include int, string, and float64."
+          },
+          {
+            "question": "Which keyword is used to define a function in Go?",
+            "options": [
+              "method",
+              "func",
+              "def",
+              "fn"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The 'func' keyword is used to define a function in Go. Functions in Go are a fundamental building block for organizing and reusing code."
+          },
+          {
+            "question": "Which of the following is NOT a valid way to declare a variable in Go?",
+            "options": [
+              "var x int",
+              "x := 5",
+              "var x = 5",
+              "x = 5"
+            ],
+            "correctAnswer": 3,
+            "explanation": "In Go, the ':=' short variable declaration syntax is used to declare and initialize a new variable. Assigning a value without declaring the variable first will result in a compilation error."
+          },
+          {
+            "question": "What is the output of the following Go code?\n\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"Hello, World!\")\n}",
+            "options": [
+              "Hello, World!",
+              "main",
+              "fmt",
+              "package"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The code will output 'Hello, World!' to the console. It is a simple program that imports the 'fmt' package and prints the string 'Hello, World!' using the 'Println' function from the 'fmt' package."
+          }
+        ]
       }
     ]
   }
