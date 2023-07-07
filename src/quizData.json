@@ -532,7 +532,7 @@
             "explanation": "The 'init' function in Golang is a special function that is automatically called at program startup. It is used to perform initialization tasks, such as setting up variables or configuring the program."
           },
           {
-            "question": "Which of the following is NOT a valid way to handle errors in Golang?",
+            "question": "Which of the following is NOT a recommended way to handle errors in Golang?",
             "options": [
               "Using 'if' statements and error values",
               "Using the 'panic' function",
