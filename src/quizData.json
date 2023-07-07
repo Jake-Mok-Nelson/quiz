@@ -427,6 +427,122 @@
             "explanation": "The code will output 'Hello, World!' to the console. It is a simple program that imports the 'fmt' package and prints the string 'Hello, World!' using the 'Println' function from the 'fmt' package."
           }
         ]
+      },
+      {
+        "title": "Golang Intermediate",
+        "imageURL": "https://quiz.jakenelson.cloud/golang.svg",
+        "questions": [
+          {
+            "question": "What is the purpose of a goroutine in Golang?",
+            "options": [
+              "To handle errors in a program",
+              "To execute code concurrently",
+              "To optimize memory usage",
+              "To enforce code encapsulation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "A goroutine is a lightweight thread of execution in Golang that allows code to run concurrently. Goroutines enable efficient and concurrent programming in Golang."
+          },
+          {
+            "question": "Which of the following is NOT a valid channel type in Golang?",
+            "options": [
+              "chan int",
+              "chan bool",
+              "chan string",
+              "chan float64"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Golang supports channels for communication and synchronization between goroutines. The 'chan float64' option is not a valid channel type in Golang."
+          },
+          {
+            "question": "What does the 'defer' keyword do in Golang?",
+            "options": [
+              "Prevents a function from being executed",
+              "Delays the execution of a function until the surrounding function completes",
+              "Specifies the return value of a function",
+              "Interrupts the execution of a goroutine"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The 'defer' keyword in Golang is used to delay the execution of a function until the surrounding function completes. Deferred functions are executed in a last-in-first-out (LIFO) order."
+          },
+          {
+            "question": "Which of the following is true about pointers in Golang?",
+            "options": [
+              "Pointers are not supported in Golang",
+              "Pointers can only be used with built-in types",
+              "Pointers allow passing values by reference",
+              "Pointers are used for garbage collection"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Pointers are supported in Golang and allow passing values by reference. Pointers are used to manipulate memory directly and can be used with both built-in and user-defined types."
+          },
+          {
+            "question": "What is the output of the following code?\n\nfunc main() {\n\tdefer fmt.Println(\"World\")\n\tfmt.Println(\"Hello\")\n}",
+            "options": [
+              "Hello\nWorld",
+              "World\nHello",
+              "Hello",
+              "World"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The code will output 'World' followed by 'Hello'. The 'defer' keyword delays the execution of the 'fmt.Println(\"World\")' statement until the surrounding function completes, resulting in 'World' being printed after 'Hello'."
+          },
+          {
+            "question": "What is the purpose of the 'sync' package in Golang?",
+            "options": [
+              "To handle file I/O operations",
+              "To synchronize access to shared resources",
+              "To parse command-line arguments",
+              "To perform network operations"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The 'sync' package in Golang provides primitives for synchronizing access to shared resources, such as mutexes and condition variables. It helps prevent data races and ensures safe concurrent access."
+          },
+          {
+            "question": "Which of the following is true about Golang interfaces?",
+            "options": [
+              "Interfaces can only contain method declarations",
+              "A type can implement multiple interfaces",
+              "Interfaces can be defined with private access",
+              "Interfaces can be instantiated using the 'new' keyword"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Golang interfaces can contain method declarations but no implementations. A type can implement multiple interfaces, allowing for flexible and polymorphic behavior. Interfaces can't be instantiated directly."
+          },
+          {
+            "question": "What is the purpose of the 'panic' function in Golang?",
+            "options": [
+              "To recover from a runtime error",
+              "To terminate the program",
+              "To handle exceptions",
+              "To suspend the execution temporarily"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The 'panic' function in Golang is used to terminate the program immediately. It is typically called when a program encounters an unrecoverable error or exceptional condition."
+          },
+          {
+            "question": "What is the purpose of the 'init' function in Golang?",
+            "options": [
+              "To initialize variables at program startup",
+              "To declare global constants",
+              "To define custom error types",
+              "To perform garbage collection"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The 'init' function in Golang is a special function that is automatically called at program startup. It is used to perform initialization tasks, such as setting up variables or configuring the program."
+          },
+          {
+            "question": "Which of the following is NOT a valid way to handle errors in Golang?",
+            "options": [
+              "Using 'if' statements and error values",
+              "Using the 'panic' function",
+              "Using 'defer' statements",
+              "Using the 'log' package"
+            ],
+            "correctAnswer": 1,
+            "explanation": "While the 'panic' function is a valid way to handle exceptional conditions, it is not recommended for general error handling in Golang. Instead, 'if' statements, error values, 'defer' statements, and the 'log' package are commonly used for error handling."
+          }          
+        ]
       }
     ]
   }
