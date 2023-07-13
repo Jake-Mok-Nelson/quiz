@@ -16,8 +16,8 @@ on:
       count:
         description: 'How many questions would you like to generate?'
         required: true
-        type: number
-        default: 10
+        type: string
+        default: "10"
 
 jobs:
   print-username:
@@ -37,8 +37,17 @@ jobs:
         id: openai
         with:
           model: davinci # or curie, babbage, ada. Or any other model documented in the openai docs
-          prompt: "This is a test" # the prompt to generate the completion
+          prompt: "Generate a new quiz containing ${{ inputs.count }} questions, on the topic of ${{ inputs.topic }} with a difficulty of ${{ inputs.difficulty }} and ensure it adheres to the following structure: $(cat quizstructure.json)" 
           max_tokens: 12 # the maximum number of tokens to generate. Optional
           temperature: 0.4 # the temperature for the model. Optional
           openai_api_key: ${{ secrets.OPENAI_API_KEY }} # your openai api key
-          openai_org_id: ${{ secrets.OPENAI_ORG_ID }} # your openai organization id. Optional
+          #openai_org_id: ${{ secrets.OPENAI_ORG_ID }} # your openai organization id. Optional
+
+      # Examples on how to use the output
+      - name: Show response from OpenAI CreateCompletion
+        run: |
+          # Using the character `'` to prevent all characters enclosed within
+          # them from being treated as special characters (e.g. $ or `)
+          echo '${{ steps.openai.outputs.response }}'
+          # Show text
+          echo '${{ fromJson(steps.openai.outputs.response).text }}'
