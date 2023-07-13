@@ -14,7 +14,7 @@ body:
     attributes:
       label: Quiz Topic
       description: What topic would you like to generate questions for?
-      placeholder: e.g. Golang
+      placeholder: "e.g. Golang"
     validations:
       required: true
   - type: dropdown
@@ -32,6 +32,6 @@ body:
     id: count
     attributes:
       label: How many questions would you like to generate for the quiz?
-      placeholder: 10
+      placeholder: "10"
     validations:
       required: true
