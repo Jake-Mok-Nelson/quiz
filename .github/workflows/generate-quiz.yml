@@ -1,0 +1,53 @@
+on:
+  workflow_call:
+    inputs:
+      topic:
+        description: 'What topic would you like to generate questions for?'
+        required: true
+        type: string
+      difficulty:
+        description: 'What difficulty would you like the questions on this topic?'
+        required: true
+        type: choice
+        options:
+          - basic
+          - intermediate
+          - advanced
+      count:
+        description: 'How many questions would you like to generate?'
+        required: true
+        type: string
+        default: "10"
+
+jobs:
+  print-username:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check user
+        run: |
+          echo $GITHUB_ACTOR
+          if [ $GITHUB_ACTOR != 'Jake-Mok-Nelson' ]; then
+            echo 'User is not Jake-Mok-Nelson'
+            exit 1
+          fi
+      - name: OpenAI CreateCompletion
+        uses: onmax/oai-createcompletion-githubaction@v1.0
+        id: openai
+        with:
+          model: davinci # or curie, babbage, ada. Or any other model documented in the openai docs
+          prompt: "Generate a new quiz containing ${{ inputs.count }} questions, on the topic of ${{ inputs.topic }} with a difficulty of ${{ inputs.difficulty }} and ensure it adheres to the following structure: $(cat quizstructure.json)" 
+          max_tokens: 12 # the maximum number of tokens to generate. Optional
+          temperature: 0.4 # the temperature for the model. Optional
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }} # your openai api key
+          #openai_org_id: ${{ secrets.OPENAI_ORG_ID }} # your openai organization id. Optional
+
+      # Examples on how to use the output
+      - name: Show response from OpenAI CreateCompletion
+        run: |
+          # Using the character `'` to prevent all characters enclosed within
+          # them from being treated as special characters (e.g. $ or `)
+          echo '${{ steps.openai.outputs.response }}'
+          # Show text
+          echo '${{ fromJson(steps.openai.outputs.response).text }}'
