@@ -27,19 +27,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Check user
+      - name: Read quiz structure
         run: |
-          echo $GITHUB_ACTOR
-          if [ $GITHUB_ACTOR != 'Jake-Mok-Nelson' ]; then
-            echo 'User is not Jake-Mok-Nelson'
-            exit 1
-          fi
+          QUIZ_STRUCTURE=$(cat quizstructure.json)
       - name: OpenAI CreateCompletion
         uses: onmax/oai-createcompletion-githubaction@v1.0
         id: openai
         with:
           model: davinci # or curie, babbage, ada. Or any other model documented in the openai docs
-          prompt: "Generate a new quiz containing ${{ inputs.count }} questions, on the topic of ${{ inputs.topic }} with a difficulty of ${{ inputs.difficulty }} and ensure it adheres to the following structure: $(cat quizstructure.json)" 
+          prompt: "Generate a new quiz containing ${{ inputs.count }} questions, on the topic of ${{ inputs.topic }} with a difficulty of ${{ inputs.difficulty }} and ensure it adheres to the following structure: ${QUIZ_STRUCTURE}" 
           max_tokens: 12 # the maximum number of tokens to generate. Optional
           temperature: 0.4 # the temperature for the model. Optional
           openai_api_key: ${{ secrets.OPENAI_API_KEY }} # your openai api key
