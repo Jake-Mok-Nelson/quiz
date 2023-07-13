@@ -1,3 +1,5 @@
+name: Generate New Quiz
+
 on:
   workflow_dispatch:
     inputs:
