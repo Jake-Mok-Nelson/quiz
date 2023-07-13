@@ -1,0 +1,40 @@
+{
+  "title": "${topic} ${difficulty}",
+  "topic": "${topic}",
+  "questions": [
+    {
+      "question": "What does 'Semver' stand for?",
+      "options": [
+        "Semantic Visualization",
+        "Semantic Versioning",
+        "Sequential Verification",
+        "Sequential Versioning"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Semver stands for Semantic Versioning, a convention for versioning software to convey the type of changes introduced in a new release."
+    },
+    {
+      "question": "Which of the following is the correct format for Semver?",
+      "options": [
+        "Major.Minor.Patch",
+        "Patch.Minor.Major",
+        "Minor.Major.Patch",
+        "Major.Patch.Minor"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The correct format for Semver is Major.Minor.Patch, where Major, Minor, and Patch are non-negative integers representing different levels of changes in the software."
+    },
+    {
+      "question": "In Semver, what does a change in the 'Major' version indicate?",
+      "options": [
+        "Backward-compatible bug fixes",
+        "Backward-compatible new features",
+        "Backward-incompatible changes",
+        "Patch version reset"
+      ]
+    },
+      "correctAnswer": 2,
+      "explanation": "A change in the Major version indicates backward-incompatible changes, which means that the new version might break existing functionality and require users to modify their code or configurations."
+    }
+  ]
+},
