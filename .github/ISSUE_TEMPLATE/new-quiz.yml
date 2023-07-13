@@ -1,0 +1,37 @@
+name: New Quiz
+description: Generate a new quiz
+title: "[Generated Quiz]: "
+labels: ["enhancement"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Let's generate a new quiz! Please ensure that an image matching the topic exists.
+  - type: input
+    id: topic
+    attributes:
+      label: Quiz Topic
+      description: What topic would you like to generate questions for?
+      placeholder: e.g. Golang
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      description: What difficulty would you like the questions on this topic?
+      options:
+        - Basic
+        - Intermediate
+        - Advanced
+    validations:
+      required: true
+  - type: input
+    id: count
+    attributes:
+      label: How many questions would you like to generate for the quiz?
+      placeholder: 10
+    validations:
+      required: true
